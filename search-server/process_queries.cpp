@@ -15,7 +15,8 @@ std::vector<std::vector<Document>> ProcessQueries(
                    queries.cbegin(),
                    queries.cend(),
                    documents.begin(),
-                   [&search_server](const std::string& q) { return search_server.FindTopDocuments(q);
+                   [&search_server](const std::string& q) {
+        return search_server.FindTopDocuments(q);
     });
     return documents;
 }

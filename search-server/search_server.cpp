@@ -3,11 +3,11 @@
 #include <numeric>
 
 SearchServer::SearchServer(const std::string& stop_words_text)
-        : SearchServer(SplitIntoWords(std::string_view(stop_words_text)))
+    : SearchServer(SplitIntoWords(std::string_view(stop_words_text)))
 {}
 
 SearchServer::SearchServer(const std::string_view stop_words_text)
-        : SearchServer(SplitIntoWords(stop_words_text))
+    : SearchServer(SplitIntoWords(stop_words_text))
 {}
 
 void SearchServer::AddDocument(int document_id,
